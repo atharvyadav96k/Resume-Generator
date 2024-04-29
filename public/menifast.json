@@ -1,0 +1,14 @@
+{
+    "name": "Developer Aadesh",
+    "short_name": "Time Table",
+    "start_url": "/index.html",
+    "display": "Time Table",
+    "icons": [
+      {
+        "src": "/public/cv.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ]
+  }
+  
