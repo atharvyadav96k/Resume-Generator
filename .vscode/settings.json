@@ -1,1 +1,11 @@
-{}
+{
+    "git.enabled": false,
+    "git.decorations.enabled": false,
+    "git.enableStatusBarSync": false,
+    "githubIssues.userCompletions.enabled": false,
+    "githubIssues.issueCompletions.enabled": false,
+    "git.terminalAuthentication": false,
+    "git.useForcePushIfIncludes": false,
+    "github.gitAuthentication": false,
+    "git.requireGitUserConfig": false
+}
