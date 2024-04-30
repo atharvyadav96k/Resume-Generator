@@ -29,21 +29,23 @@ const LastYearGrades = Array.from(document.getElementsByClassName('LastYearGrade
 const Skills = Array.from(document.getElementsByClassName('Skills'));
 const MoreInformation = Array.from(document.getElementsByClassName('MoreInformation'));
 const profile_img = Array.from(document.getElementsByClassName('profile-img'));
+const card = Array.from(document.getElementsByClassName('card'));
 
 next.addEventListener('click', () => {
     displayContent(user_name, name_inp.value);
     displayContent(dob, dob_inp.value);
-    displayContent(Nationality, Nationality_inp.value)
-    displayContent(Email, email_inp.value)
-    displayContent(PersonalDetails, PersonalDetails_inp.value)
-    displayContent(Hobbies, Hobbies_inp.value)
-    displayContent(WorkingExperience, WorkingExperience_inp.value)
-    displayContent(Courses, Courses_inp.value)
-    displayContent(Courses, Courses_inp.value)
-    displayContent(PassingDate, Passingdate_inp.value)
-    displayContent(LastYearGrades, LastYearGrades_inp.value)
-    displayContent(Skills, Skills_inp.value)
-    // displayContent(MoreInformation, MoreAboutYourSelf_inp.value)
+    displayContent(Nationality, Nationality_inp.value);
+    displayContent(Email, email_inp.value);
+    displayContent(PersonalDetails, PersonalDetails_inp.value);
+    displayContent(Hobbies, Hobbies_inp.value);
+    displayContent(WorkingExperience, WorkingExperience_inp.value);
+    displayContent(Courses, Courses_inp.value);
+    displayContent(Courses, Courses_inp.value);
+    displayContent(PassingDate, Passingdate_inp.value);
+    displayContent(LastYearGrades, LastYearGrades_inp.value);
+    displayContent(Skills, Skills_inp.value);
+    console.log(MoreAboutYourSelf_inp.value);
+    displayContent(MoreInformation, MoreAboutYourSelf_inp.value)
 
     // Read the selected image file
     const file = img_inp.files[0];
@@ -57,10 +59,53 @@ next.addEventListener('click', () => {
         };
         reader.readAsDataURL(file);
     }
+    hideAllPages();
+    document.getElementById("select-template").style.display = 'flex'
+    card.forEach((ele, index)=>{
+        ele.addEventListener('click', ()=>{
+            console.log(index)
+            hideAllPages();
+            switch(index){
+                case 0: 
+                    hideAllPages();
+                    document.getElementById("template-1").style.display = 'block';
+                    break;
+                case 1:
+                    hideAllPages();
+                    document.getElementById("template-2").style.display = 'block'
+                    break;
+                case 2:
+                    hideAllPages();
+                    document.getElementById("template-3").style.display = 'block'
+                    break;
+            }
+        });
+    });
 });
 
 function displayContent(obj, val){
     obj.forEach((ele)=>{
         ele.innerText = val;
     })
+}
+
+function hideAllPages(){
+    document.getElementById("main").style.display = 'none'
+    document.getElementById("select-template").style.display = 'none'
+    document.getElementById("template-1").style.display = 'none'
+    document.getElementById("template-2").style.display = 'none'
+    document.getElementById("template-3").style.display = 'none'
+}
+
+function backButton(){
+    hideAllPages();
+    document.getElementById("select-template").style.display = 'flex'
+}
+function homeButton(){
+    hideAllPages();
+    document.getElementById("main").style.display = 'block'
+}
+
+function printDocument(){
+    window.print();
 }
