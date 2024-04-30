@@ -1,0 +1,33 @@
+.profile-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+#template-1 .profile-img{
+    margin-right: 30px;
+}
+.info{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+#template-1 header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#template-2 header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#template-2 h5{
+    text-align: right;
+}
+#template-2 .info p{
+    text-align: right;
+}
+#template-3 h1{
+    margin-top: 30px;
+    font-size: 20px;
+}
