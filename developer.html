@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body>
+    <style>
+        #main{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .dev{
+            margin: 10px;
+        }
+        .dev img{
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .dev:last-child img{
+            transform: rotate(-90deg);
+        }
+        .name{
+            text-align: center;
+        }
+    </style>
+    <h1>Developers</h1>
+    <div id="main">
+        <div class="dev">
+            <img src="./public/1.jpg" alt="">
+            <div class="name">Tejas Khilare</div>
+        </div>
+        <div class="dev">
+            <img src="./public/WhatsApp Image 2024-05-04 at 09.20.19_8aa0e3bf.jpg" alt="">
+            <div class="name">Prajwal</div>
+        </div>
+        <div class="dev">
+            <img src="./public/WhatsApp Image 2024-05-04 at 09.21.42_eb68b5dc.jpg" alt="">
+            <div class="name">Dhananjay</div>
+        </div>
+        <div class="dev">
+            <img src="./public/WhatsApp Image 2024-05-04 at 09.22.09_139c3557.jpg" alt="">
+            <div class="name">Siddharth</div>
+        </div>
+    </div>
+</body>
+</html>
